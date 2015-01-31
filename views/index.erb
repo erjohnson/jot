@@ -1,0 +1,11 @@
+<div class="row">
+  <a class="button button-primary" href="/new">New</a>
+</div>
+<hr/>
+<div class="row">
+  <ul>
+    <% @list.each do |doc| %>
+      <li><a href="/document/<%= doc['path']['key'] %>"><%= doc['value']['title'] %></a></li>
+    <% end %>
+  </ul>
+</div>

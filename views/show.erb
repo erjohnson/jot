@@ -1,0 +1,42 @@
+<a href="/">Back Home</a>
+<hr/>
+<h1 id="title"><%= @title %></h1>
+
+<div class="row">
+  <a class="button" href="/undo/<%= @id %>">Undo</a>
+</div>
+
+<p><span id="saved">Saved!</span>&nbsp;</p>
+
+<textarea class="u-full-width" id="editor"></textarea>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $("textarea#editor").val("<%= @content %>");
+    function save() {
+      var title = $("h1#title").text();
+      var content = $("textarea#editor").val();
+      $.ajax({
+        url: '/document/<%= @id %>',
+        type: 'PUT',
+        data: { title: title, content: content}
+      });
+
+      $('#saved').show();
+
+      setTimeout(function() { 
+        $('#saved').hide();
+      }, 4000);
+    };
+
+    var timeoutId;
+
+    $('#editor').on('input propertychange', function() {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(function() {   
+        save();
+      }, 1000);
+    });
+  });
+</script>

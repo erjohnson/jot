@@ -1,0 +1,56 @@
+GIT
+  remote: https://github.com/sinatra/sinatra-contrib.git
+  revision: e80c8635c7350f9c200e718a536b2a11b6cc5afe
+  specs:
+    sinatra-contrib (1.4.2)
+      backports (>= 2.0)
+      multi_json
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.0)
+      tilt (~> 1.3)
+
+GIT
+  remote: https://github.com/sinatra/sinatra.git
+  revision: 27d1716c7388db9f3c07d07c8b0c3c285d5caf42
+  specs:
+    sinatra (1.4.5)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    backports (3.6.4)
+    daemons (1.1.9)
+    dotenv (1.0.2)
+    eventmachine (1.0.4)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    multi_json (1.10.1)
+    multipart-post (2.0.0)
+    net-http-persistent (2.9.4)
+    orchestrate (0.11.0)
+      faraday (= 0.9.0)
+      net-http-persistent (~> 2.9)
+    rack (1.6.0)
+    rack-protection (1.5.3)
+      rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
+    tilt (1.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv
+  orchestrate
+  sinatra!
+  sinatra-contrib!
+  thin
