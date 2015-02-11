@@ -1,6 +1,8 @@
 # Jot
 
-Jot is a very basic document editor built with [Sinatra](http://www.sinatrarb.com/) and [Orchestrate](https://orchestrate.io/).
+Jot is a basic document editor built with [Sinatra](http://www.sinatrarb.com/) and [Orchestrate](https://orchestrate.io/), with undo functionality powered by [Refs](https://orchestrate.io/docs/apiref#refs).
+
+See the [blog post](https://orchestrate.io/blog/2015/02/09/simple-version-control/)
 
 ## Installation
 
